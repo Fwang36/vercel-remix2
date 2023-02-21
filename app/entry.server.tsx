@@ -14,6 +14,10 @@ Sentry.init({
     new Sentry.BrowserTracing({
     }),
   ],
+  beforeSend(event) {
+    console.log(event)
+    return event
+  }
 });
 const ABORT_DELAY = 5000;
 
