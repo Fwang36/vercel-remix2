@@ -16,10 +16,12 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
 };
 
-export const meta: MetaFunction = () => ({
+export const meta: MetaFunction = (data) => ({
   charset: "utf-8",
   title: "Remix Notes",
   viewport: "width=device-width,initial-scale=1",
+  "sentry-trace": "test",
+  baggage: "test2",
 });
 
 export async function loader({ request }: LoaderArgs) {
