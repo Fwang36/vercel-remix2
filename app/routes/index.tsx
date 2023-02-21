@@ -3,12 +3,6 @@ import { json, LoaderFunction } from "@remix-run/node";
 
 import { useOptionalUser } from "~/utils";
 
-  export let loader: LoaderFunction = async () => {
-    throw new Error("Sentry error test");
-  
-    return null;
-  }
-  
 export default function Index() {
   const user = useOptionalUser();
   return (
